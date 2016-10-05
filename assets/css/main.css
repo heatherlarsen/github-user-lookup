@@ -1,0 +1,376 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald';
+
+*, html, body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  color: #A9B8B8;
+  padding: 25px 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 20px 0 70px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.8em;
+  color: #888;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+a {
+  /*color: #8eadd2;*/
+  color: rgba(42,88,127,1);
+}
+
+a:hover {
+  /*color: #6e91b9;*/
+  color: rgba(42,88,127,0.8);
+}
+
+input, textarea, select, radio, checkbox, button {
+  outline: 0;
+}
+
+.container {
+  background: #FFF;
+  padding: 25px 0;
+}
+
+.feed {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 25px;
+}
+
+/* loader */
+.loading {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: .25rem solid rgba(0,0,0, 0.2);
+  border-top-color: rgb(0,0,0);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.user-search {
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.icon-user .glyphicon {
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  border-right: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  padding-right: 10px;
+}
+
+.icon-close .glyphicon {
+  position: relative;
+  top: -30px;
+  right: 10px;
+  color: #e5e5e5;
+  z-index: 15;
+  float: right;
+}
+
+/* input field */
+.input-wrap {
+  width: 100%;
+  height: 50px;
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-username {
+  padding: 7px 8px 7px 60px;
+  font-size: 1.4em;
+  background: transparent;
+  color: #666;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  border: 0px;
+  position: relative;
+  z-index: 5;
+}
+
+input:focus, .input-wrap:focus {
+  outline: 0;
+}
+
+.is-focused {
+  outline: 0;
+  /*border: 1px solid #a8e5e1;*/
+  border: 1px solid #2A587F;
+}
+
+.is-focused .icon-user .glyphicon {
+  color: #2A587F;
+  border-right: 1px solid #2A587F;
+}
+
+.btn-search {
+  float: right;
+  background: none;
+  border: none;
+  border-radius: 3px;
+  width: 30%;
+  height: 50px;
+  padding: 7px 8px;
+  font-size: 18px;
+  font-weight: 700;
+  /*background: rgba(168,229,225,1);*/
+  background: rgba(42,88,127,1);
+  color: #fff;
+}
+
+.btn-search:hover {
+  /*background: rgba(168,229,225,0.8);*/
+  background: rgba(42,88,127,0.8);
+}
+
+.icon-search {
+  background: url("../images/search.svg");
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+.bcrumb-wrap {
+  margin: 30px 0;
+}
+
+.bcrumb {
+  display: table;
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+  table-layout: fixed;
+  font-size: 16px;
+  width: 100%;
+}
+
+.crumb {
+  display: table-cell;
+  /*
+  text-align: center;
+  line-height: 3em;
+  height: 48px;
+  */
+  text-align: left;
+  line-height: 1;
+  height: 20px;
+}
+
+.crumb.is-active {
+  position: relative;
+  /*background: #E8876F;*/
+  /*background: #577570;*/
+  color: #E8876F;
+  font-weight: 700;
+  /*border-radius: 3px;*/
+  border-bottom: 2px solid;
+}
+
+.user-notfound, .repo-notfound {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.user-img {
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+
+.user-img img {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+
+.user-location .glyphicon,
+.user-website .glyphicon  {
+  padding-right: 10px;
+}
+
+.user-location, .user-website {
+  margin: 5px 0;
+}
+
+/* helpers */
+.btn-generic {
+  background: none;
+  border: none;
+  border-radius: 3px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  /*background: rgba(168,229,225,1);*/
+  background: rgba(42,88,127,1);
+  color: #fff;
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+}
+
+.btn-generic:hover {
+  /*background: rgba(168,229,225,0.8);*/
+  background: rgba(42,88,127,0.8);
+  color: #fff;
+  text-decoration: none;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* clearfix */
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.sub-header {
+  color: #888;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.repo-header {
+  margin: 15px 0;
+  /*color: #8eadd2;*/
+  color: rgba(42,88,127,1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.repo-header:hover {
+  /*color: #6e91b9;*/
+  color: rgba(42,88,127,0.8);
+}
+
+.repo-header .glyphicon-folder-close {
+  padding-right: 10px;
+}
+
+.repo-header .glyphicon-chevron-right,
+.repo-header .glyphicon-chevron-down {
+  float: right;
+}
+
+.repo-owner img {
+
+}
+
+.repo-contributor-icon {
+  width: 8.333%;
+  display: inline-block;
+  padding: 5px;
+}
+
+.repo-contributors .sub-header {
+  display: block;
+  margin-top: 10px;
+}
+
+.pagination-wrap {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.page-num {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.page-num:hover {
+  text-decoration: none;
+}
+
+.page-num.is-active {
+  background-color: lightgray;
+  color: #888;
+  cursor: default;
+}
+
+.page-num.is-active:hover {
+  background-color: lightgray;
+  color: #888;
+  text-decoration: none;
+  cursor: default;
+}
+
+.commit-message-header, .commit-on-header {
+  display: block;
+  margin: 10px 0;
+}
+
+.commit .row {
+  border-bottom: 1px solid;
+  padding: 10px 0;
+}
+
+.commit p {
+  font-size: 12px;
+}
+
+.commits h3 span {
+  font-size: 12px;
+  padding-left: 5px;
+  cursor: pointer;
+}
