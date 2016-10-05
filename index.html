@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Github Feed</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="//assets.heather-test.rioseo.com/css/main.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Enter a Github username to get started</h1>
+            <div class="row">
+                <div class="col-md-3"><!-- intentionally left blank --></div>
+                <div class="col-md-6">
+                    <!-- form -->
+                    <form method="get" name="userinput" action="#" class="user-search js-submit-form cf">
+                        <div class="input-wrap" tabindex="1">
+                            <span class="icon-user">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </span>
+                            <input type="text" name="ghusername" class="input-username js-entered-user">
+                            <span class="icon-close js-clear-input-btn is-hidden">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                        </div>
+                        <button type="submit" class="btn-search">Search</button>
+                    </form>
+                    <!-- /form -->
+
+                    <!-- progress -->
+                    <div class="bcrumb-wrap js-show-bcrumb is-hidden">
+                        <div class="bcrumb">
+                            <div class="crumb js-crumb-data">User Data</div>
+                            <div class="crumb js-crumb-repos">User Repositories</div>
+                        </div>
+                    </div>
+                    <!-- /progress -->
+
+                    <div class="content js-content-loading is-hidden">
+                        <div class="loading"></div>
+                    </div>
+
+                    <!-- user data -->
+                    <div class="content js-content-data is-hidden">
+                        <div class="user-notfound js-user-notfound is-hidden">User Not Found!</div>
+                        <div class="js-display-user-data">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="user-img js-user-img"></div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="username">
+                                                <span class="js-user-name"></span>
+                                                <span class="js-user-handle"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="user-location js-user-location"></div>
+                                            <div class="user-website js-user-website"></div>
+                                        </div>
+                                    </div>
+                                    <div class="desc-wrap">
+                                        <p class="js-user-desc"></p>
+                                    </div>
+                                    <div class="repo-btn-wrap js-repo-btn"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /user data -->
+
+                    <!-- user repos -->
+                    <div class="content js-content-repos is-hidden" data-content="repos">
+                        <div class="repo-notfound js-repo-notfound is-hidden">No Public Repositories Found!</div>
+                        <div class="js-display-repo-data"></div>
+                    </div>
+                    <!-- /user repos -->
+                </div>
+                <div class="col-md-3"><!-- intentionally left blank --></div>
+            </div>
+        </div>
+
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//assets.heather-test.rioseo.com/js/helpers.js"></script>
+        <script type="text/javascript" src="//assets.heather-test.rioseo.com/js/lookups.js"></script>
+        <script type="text/javascript" src="//assets.heather-test.rioseo.com/js/main.js"></script>
+    </body>
+</html>
